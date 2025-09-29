@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block title %}Our Airline Partners{% endblock %}
+{% block content %}
+<h1 class="display-5 fw-bold mb-4">Our Airline Partners</h1>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    {% for name, data in airlines.items() %}
+    <div class="col">
+        <div class="card h-100 text-center shadow-sm">
+            <img src="{{ url_for('static', filename='images/' + data.logo) }}" class="card-img-top p-4" alt="{{ name }} Logo" style="max-height: 150px; object-fit: contain;">
+            <div class="card-body">
+                <h5 class="card-title">{{ name }}</h5>
+                <a href="{{ url_for('airline_details', airline_name=name) }}" class="btn btn-outline-primary">View Fleet</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

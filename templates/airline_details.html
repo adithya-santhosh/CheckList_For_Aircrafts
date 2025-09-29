@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block title %}{{ airline_name }} Fleet{% endblock %}
+{% block content %}
+<div class="content-wrapper">
+    <h1 class="display-5 fw-bold mb-4">{{ airline_name }} Fleet</h1>
+    <div class="list-group">
+        {% for plane in airline_data.fleet %}
+        <div class="list-group-item d-flex align-items-center">
+            <img src="{{ url_for('static', filename='images/' + plane.image) }}" alt="{{ plane.name }}" class="me-3 rounded" style="width: 100px; height: 60px; object-fit: cover;">
+            <span>{{ plane.name }}</span>
+        </div>
+        {% endfor %}
+    </div>
+    <a href="{{ url_for('airlines_list') }}" class="btn btn-secondary mt-4">Back to Airlines</a>
+</div>
+{% endblock %}
