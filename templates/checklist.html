@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+{% block title %}Checklist for {{ aircraft }}{% endblock %}
+{% block content %}
+<div class="content-wrapper">
+    <p class="lead">Pre-Flight Checklist for:</p>
+    <h1 class="display-5 fw-bold mb-4">{{ aircraft }}</h1>
+    
+    <div class="card">
+        <div class="list-group list-group-flush">
+            {% for item in items %}
+            <label class="list-group-item">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="check{{ loop.index }}">
+                    <label class="form-check-label" for="check{{ loop.index }}">
+                        {{ item }}
+                    </label>
+                </div>
+            </label>
+            {% else %}
+            <div class="list-group-item text-danger">No checklist found for this model.</div>
+            {% endfor %}
+            </div>
+    </div>
+    
+    <a href="{{ url_for('available_checklists') }}" class="btn btn-secondary mt-4">Back to Selection</a>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // When any checkbox is changed
+        $('.form-check-input').on('change', function() {
+            // Find the label associated with this checkbox
+            const label = $(this).siblings('label');
+            
+            // Toggle a 'completed' class on the label
+            if ($(this).is(':checked')) {
+                label.addClass('completed');
+            } else {
+                label.removeClass('completed');
+            }
+        });
+    });
+</script>
+{% endblock %}

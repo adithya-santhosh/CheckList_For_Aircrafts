@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<video playsinline autoplay muted loop class="video-background">
+    <source src="{{ url_for('static', filename='video/background_video.mp4') }}" type="video/mp4">
+</video>
+<div class="video-overlay"></div>
+
+<div class="container d-flex flex-column align-items-center justify-content-center text-center dashboard-content">
+    <h1 class="display-3 fw-bold">Welcome to the Flight Deck</h1>
+    <p class="lead col-lg-8 mx-auto">
+        Your centralized hub for aviation tools. Access pre-flight checklists or browse our network of collaborated airlines to see their operational fleets.
+    </p>
+    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+        <a href="{{ url_for('available_checklists') }}" class="btn btn-primary btn-lg px-4 gap-3">Open Checklists</a>
+        <a href="{{ url_for('airlines_list') }}" class="btn btn-outline-light btn-lg px-4">Browse Airlines</a>
+    </div>
+</div>
+{% endblock %}
