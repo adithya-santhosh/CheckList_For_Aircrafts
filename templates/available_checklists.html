@@ -22,3 +22,21 @@
 
     </div>
 </div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // ✅ CORRECTED LINE: Added the '|safe' filter
+        const checklistsData = {{ checklists|tojson|safe }};
+
+        $('#aircraft-select').on('change', function() {
+            const selectedAircraft = $(this).val();
+            if (selectedAircraft && checklistsData[selectedAircraft]) {
+                const imageName = checklistsData[selectedAircraft].image;
+                const imageUrl = "{{ url_for('static', filename='images/') }}" + imageName;
+                $('#aircraft-image').attr('src', imageUrl);
+            }
+        });
+    });
+</script>
+{% endblock %}
