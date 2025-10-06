@@ -12,12 +12,12 @@ Here’s a look at the application in action.
 
 | Login Page | Dashboard |
 | :---: | :---: |
-| ![Alt text](Screenshots\userlogin.png) | ![Alt text](Screenshots\dashboard.png) |
+| ![Alt text](screenshots\userlogin.png) | ![Alt text](screenshots\dashboard.png) |
 | **_Figure 1:_** _The secure login portal._ | **_Figure 2:_** _The dynamic video dashboard._ |
 
 | Checklist Generator | Airline Browser |
 | :---: | :---: |
-| ![Alt text](Screenshots\cheecklist.png)  | ![Alt text](Screenshots\Airline_partner.png)  |
+| ![Alt text](screenshots\cheecklist.png)  | ![Alt text](screenshots\Airline_partner.png)  |
 | **_Figure 3:_** _Interactive checklist selection._ | **_Figure 4:_** _Browsing airline fleets._ |
 
 
