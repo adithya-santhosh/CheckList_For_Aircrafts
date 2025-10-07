@@ -8,16 +8,15 @@ A full-stack web application designed for aviation enthusiasts and pilots to gen
 
 Here’s a look at the application in action.
 
-*(**Note**: Replace these with your actual screenshots. It's recommended to create a `screenshots` folder in your project to store them.)*
 
 | Login Page | Dashboard |
 | :---: | :---: |
-| ![Alt text](./screenshots\userlogin.png) | ![Alt text](./screenshots\dashboard.png) |
+| ![Alt text](Screenshots/userlogin.png) | ![Alt text](Screenshots/dashboard.png) |
 | **_Figure 1:_** _The secure login portal._ | **_Figure 2:_** _The dynamic video dashboard._ |
 
 | Checklist Generator | Airline Browser |
 | :---: | :---: |
-| ![Alt text](./screenshots\cheecklist.png)  | ![Alt text](./screenshots\Airline_partner.png)  |
+| ![Alt text](Screenshots/cheecklist.png)  | ![Airline Browser](Screenshots/Airline_partner.png)  |
 | **_Figure 3:_** _Interactive checklist selection._ | **_Figure 4:_** _Browsing airline fleets._ |
 
 
@@ -56,8 +55,8 @@ To run this project locally, follow these steps:
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/your-username/aviation-checklist.git](https://github.com/your-username/aviation-checklist.git)
-    cd aviation-checklist
+    git clone https://github.com/adithya-santhosh/CheckList_For_Aircrafts
+    cd CheckList_For_Aircrafts
     ```
 
 2.  **Create and activate a virtual environment:**
@@ -77,7 +76,7 @@ To run this project locally, follow these steps:
     ```
 
 4.  **Prepare the data and assets:**
-    * Ensure you have a `checklists.xlsx` file in the root directory with the correct column headers (`Aircraft`, `Checklist Item`, `Action`, `ImageFile`).
+    * Ensure you have a `Aircraft_Preflight_Checklis.xlsx` file in the root directory with the correct column headers (`Aircraft`, `Checklist Item`, `Action`, `ImageFile`).
     * Place all necessary images (logos, planes) in the `static/images/` folder.
     * Place your background video in the `static/videos/` folder and ensure it's named `background_video.mp4`.
 
